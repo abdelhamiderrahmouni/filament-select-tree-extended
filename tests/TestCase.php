@@ -2,9 +2,9 @@
 
 namespace AbdelhamidErrahmouni\FilamentSelectTreeExtended\Tests;
 
+use AbdelhamidErrahmouni\FilamentSelectTreeExtended\FilamentSelectTreeExtendedServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use AbdelhamidErrahmouni\FilamentSelectTreeExtended\FilamentSelectTreeExtendedServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;

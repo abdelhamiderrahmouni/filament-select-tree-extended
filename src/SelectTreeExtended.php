@@ -92,7 +92,7 @@ class SelectTreeExtended extends Field implements HasAffixActions
     {
         // Load the state from relationships using a callback function.
         $this->loadStateFromRelationshipsUsing(static function (self $component): void {
-            if(empty($component->options)) {
+            if (empty($component->options)) {
                 // Get the current relationship associated with the component.
                 $relationship = $component->getRelationship();
 
@@ -114,7 +114,7 @@ class SelectTreeExtended extends Field implements HasAffixActions
             self $component,
             $state
         ) {
-            if(empty($component->options)) {
+            if (empty($component->options)) {
                 // Check if the component's relationship is a BelongsToMany relationship.
                 if ($component->relationship && $component->getRelationship() instanceof BelongsToMany) {
                     // Wrap the state in a collection and convert it to an array if it's not set.
@@ -146,7 +146,7 @@ class SelectTreeExtended extends Field implements HasAffixActions
             return $component->getCustomKey($record);
         });
 
-        if(!empty($this->relationship)) {
+        if (! empty($this->relationship)) {
             $this->dehydrated(fn (SelectTreeExtended $component): bool => ! $component->getRelationship() instanceof BelongsToMany);
         }
 
@@ -159,7 +159,7 @@ class SelectTreeExtended extends Field implements HasAffixActions
 
     private function buildTree(): Collection
     {
-        if($this->options) {
+        if ($this->options) {
             $combinedResults = collect($this->options);
         } else {
             // Start with two separate query builders
@@ -474,9 +474,10 @@ class SelectTreeExtended extends Field implements HasAffixActions
 
     public function getMultiple(): bool
     {
-        if($this->options) {
+        if ($this->options) {
             return $this->isMultiple;
         }
+
         return $this->evaluate($this->getRelationship() instanceof BelongsToMany);
     }
 
