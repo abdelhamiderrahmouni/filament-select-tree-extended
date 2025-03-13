@@ -26,14 +26,14 @@ php artisan filament:assets
 Use the tree for a `BelongsToMany` relationship
 
 ```PHP
-SelectTree::make('categories')
+SelectTreeExtended::make('categories')
     ->relationship('categories', 'name', 'parent_id')
 ```
 
 Use the tree for a `BelongsTo` relationship
 
 ```PHP
-SelectTree::make('category_id')
+SelectTreeExtended::make('category_id')
     ->relationship('category', 'name', 'parent_id')
 ```
 
@@ -42,14 +42,14 @@ SelectTree::make('category_id')
 Customize the parent query
 
 ```PHP
-SelectTree::make('categories')
+SelectTreeExtended::make('categories')
     ->relationship(relationship: 'categories', titleAttribute: 'name', parentAttribute: 'parent_id', modifyQueryUsing: fn($query) => $query));
 ```
 
 Customize the child query
 
 ```PHP
-SelectTree::make('categories')
+SelectTreeExtended::make('categories')
     ->relationship(relationship: 'categories', titleAttribute: 'name', parentAttribute: 'parent_id', modifyChildQueryUsing: fn($query) => $query));
 ```
 
@@ -167,7 +167,7 @@ Store fetched models for additional functionality
 Now you can access the results in `disabledOptions` or `hiddenOptions`
 
 ```PHP
-->disabledOptions(function ($state, SelectTree $component) {
+->disabledOptions(function ($state, SelectTreeExtended $component) {
     $results = $component->getResults();
 })
 ```
@@ -179,14 +179,14 @@ Use the tree in your table filters. Here's an example to show you how.
 ```bash
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
-use AbdelhamidErrahmouni\FilamentSelectTreeExtended\SelectTree;
+use AbdelhamidErrahmouni\FilamentSelectTreeExtended\SelectTreeExtended;
 ```
 
 ```php
 ->filters([
     Filter::make('tree')
         ->form([
-            SelectTree::make('categories')
+            SelectTreeExtended::make('categories')
                 ->relationship('categories', 'name', 'parent_id')
                 ->independent(false)
                 ->enableBranchNode(),

@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-class SelectTree extends Field implements HasAffixActions
+class SelectTreeExtended extends Field implements HasAffixActions
 {
     use CanBeDisabled;
     use CanBeSearchable;
@@ -136,7 +136,7 @@ class SelectTree extends Field implements HasAffixActions
             }
         });
 
-        $this->createOptionUsing(static function (SelectTree $component, array $data, Form $form) {
+        $this->createOptionUsing(static function (SelectTreeExtended $component, array $data, Form $form) {
             $record = $component->getRelationship()->getRelated();
             $record->fill($data);
             $record->save();
@@ -147,13 +147,13 @@ class SelectTree extends Field implements HasAffixActions
         });
 
         if(!empty($this->relationship)) {
-            $this->dehydrated(fn (SelectTree $component): bool => ! $component->getRelationship() instanceof BelongsToMany);
+            $this->dehydrated(fn (SelectTreeExtended $component): bool => ! $component->getRelationship() instanceof BelongsToMany);
         }
 
-        $this->placeholder(static fn (SelectTree $component): ?string => $component->isDisabled() ? null : __('filament-forms::components.select.placeholder'));
+        $this->placeholder(static fn (SelectTreeExtended $component): ?string => $component->isDisabled() ? null : __('filament-forms::components.select.placeholder'));
 
         $this->suffixActions([
-            static fn (SelectTree $component): ?Action => $component->getCreateOptionAction(),
+            static fn (SelectTreeExtended $component): ?Action => $component->getCreateOptionAction(),
         ]);
     }
 
@@ -570,12 +570,12 @@ class SelectTree extends Field implements HasAffixActions
         }
 
         $action = Action::make($this->getCreateOptionActionName())
-            ->form(function (SelectTree $component, Form $form): array|Form|null {
+            ->form(function (SelectTreeExtended $component, Form $form): array|Form|null {
                 return $component->getCreateOptionActionForm($form->model(
                     $component->getRelationship() ? $component->getRelationship()->getModel()::class : null,
                 ));
             })
-            ->action(static function (Action $action, array $arguments, SelectTree $component, array $data, ComponentContainer $form) {
+            ->action(static function (Action $action, array $arguments, SelectTreeExtended $component, array $data, ComponentContainer $form) {
                 if (! $component->getCreateOptionUsing()) {
                     throw new Exception("Select field [{$component->getStatePath()}] must have a [createOptionUsing()] closure set.");
                 }
@@ -610,7 +610,7 @@ class SelectTree extends Field implements HasAffixActions
             ->iconButton()
             ->modalHeading($this->getCreateOptionModalHeading() ?? __('filament-forms::components.select.actions.create_option.modal.heading'))
             ->modalSubmitActionLabel(__('filament-forms::components.select.actions.create_option.modal.actions.create.label'))
-            ->extraModalFooterActions(fn (Action $action, SelectTree $component): array => $component->getMultiple() ? [
+            ->extraModalFooterActions(fn (Action $action, SelectTreeExtended $component): array => $component->getMultiple() ? [
                 $action->makeModalSubmitAction('createAnother', arguments: ['another' => true])
                     ->label(__('filament-forms::components.select.actions.create_option.modal.actions.create_another.label')),
             ] : []);
