@@ -20,8 +20,8 @@
         @else
             ax-load
         @endif
-        ax-load-css="{{ FilamentAsset::getStyleHref('filament-select-tree-styles', package: 'sebgm/filament-select-tree') }}"
-        ax-load-src="{{ FilamentAsset::getAlpineComponentSrc('filament-select-tree', package: 'sebgm/filament-select-tree') }}"
+        ax-load-css="{{ FilamentAsset::getStyleHref('filament-select-tree-extended-styles', package: 'abdelhamiderrahmouni/filament-select-tree-extended') }}"
+        ax-load-src="{{ FilamentAsset::getAlpineComponentSrc('filament-select-tree-extended', package: 'abdelhamiderrahmouni/filament-select-tree-extended') }}"
         x-data="selectTree({
             name: @js($getName()),
             state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$getStatePath()}')") }},

@@ -1,10 +1,10 @@
 <?php
 
-namespace SebGM\FilamentSelectTree\Tests;
+namespace AbdelhamidErrahmouni\FilamentSelectTreeExtended\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use SebGM\FilamentSelectTree\FilamentSelectTreeServiceProvider;
+use AbdelhamidErrahmouni\FilamentSelectTreeExtended\FilamentSelectTreeExtendedServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
@@ -27,7 +27,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'SebGM\\FilamentSelectTree\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'AbdelhamidErrahmouni\\FilamentSelectTreeExtended\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -48,7 +48,7 @@ class TestCase extends Orchestra
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
-            FilamentSelectTreeServiceProvider::class,
+            FilamentSelectTreeExtendedServiceProvider::class,
         ];
     }
 

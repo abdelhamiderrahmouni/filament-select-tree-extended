@@ -1,22 +1,25 @@
 {
-    "name": "sebgm/filament-select-tree",
+    "name": "abdelhamiderrahmouni/filament-select-tree-extended",
     "description": "The multi-level select field enables you to make single selections from a predefined list of options that are organized into multiple levels or depths.",
     "keywords": [
-        "CodeWithDennis",
         "laravel",
         "filament-select-tree",
+        "filament-select-tree-extended",
         "filament",
-        "tree"
+        "tree",
+        "treeselect",
+        "select",
+        "advanced select"
     ],
-    "homepage": "https://github.com/sebgm/filament-select-tree",
+    "homepage": "https://github.com/abdelhamiderrahmouni/filament-select-tree-extended",
     "support": {
-        "issues": "https://github.com/sebgm/filament-select-tree/issues",
-        "source": "https://github.com/sebgm/filament-select-tree"
+        "issues": "https://github.com/abdelhamiderrahmouni/filament-select-tree-extended/issues",
+        "source": "https://github.com/abdelhamiderrahmouni/filament-select-tree-extended"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Sébastien Dalibard",
+            "name": "Abdelhamid Errahmouni",
             "role": "Developer"
         }
     ],
@@ -36,12 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SebGM\\FilamentSelectTree\\": "src/"
+            "AbdelhamidErrahmouni\\FilamentSelectTreeExtended\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SebGM\\FilamentSelectTree\\Tests\\": "tests/"
+            "AbdelhamidErrahmouni\\FilamentSelectTreeExtended\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -59,7 +62,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SebGM\\FilamentSelectTree\\FilamentSelectTreeServiceProvider"
+                "AbdelhamidErrahmouni\\FilamentSelectTreeExtended\\FilamentSelectTreeExtendedServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-// translations for SebGM/FilamentSelectTree
+// translations for AbdelhamidErrahmouni/FilamentSelectTreeExtended
 return [
     //
 ];

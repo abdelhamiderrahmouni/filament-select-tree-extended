@@ -1,5 +1,5 @@
 <?php
 
-use SebGM\FilamentSelectTree\Tests\TestCase;
+use AbdelhamidErrahmouni\FilamentSelectTreeExtended\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -1,18 +1,20 @@
 # Filament Select Tree
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/codewithdennis/filament-select-tree.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/filament-select-tree)
-[![Total Downloads](https://img.shields.io/packagist/dt/codewithdennis/filament-select-tree.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/filament-select-tree)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/abdelhamiderrahmouni/filament-select-tree-extended.svg?style=flat-square)](https://packagist.org/packages/abdelhamiderrahmouni/filament-select-tree-extended)
+[![Total Downloads](https://img.shields.io/packagist/dt/abdelhamiderrahmouni/filament-select-tree-extended.svg?style=flat-square)](https://packagist.org/packages/abdelhamiderrahmouni/filament-select-tree-extended)
+
+> **Notice:** This package is for my personal use, use it at your own risk!
 
 This package adds a dynamic select tree field to your Laravel / Filament application, allowing you to create interactive hierarchical selection dropdowns based on relationships. It's handy for building selection dropdowns with various customization options.
 
-![thumbnail](https://raw.githubusercontent.com/CodeWithDennis/filament-select-tree/3.x/resources/images/thumbnail.jpg)
+![thumbnail](https://raw.githubusercontent.com/abdelhamiderrahmouni/filament-select-tree-extended/main/resources/images/thumbnail.jpg)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require sebgm/filament-select-tree
+composer require abdelhamiderrahmouni/filament-select-tree-extended
 ```
 
 ```bash
@@ -177,7 +179,7 @@ Use the tree in your table filters. Here's an example to show you how.
 ```bash
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
-use CodeWithDennis\FilamentSelectTree\SelectTree;
+use AbdelhamidErrahmouni\FilamentSelectTreeExtended\SelectTree;
 ```
 
 ```php
@@ -205,9 +207,9 @@ use CodeWithDennis\FilamentSelectTree\SelectTree;
 ```
 
 ## Screenshots
-![example-1](https://raw.githubusercontent.com/CodeWithDennis/filament-select-tree/3.x/resources/images/example-1.jpg)
-![example-2](https://raw.githubusercontent.com/CodeWithDennis/filament-select-tree/3.x/resources/images/example-2.jpg)
-![example-3](https://raw.githubusercontent.com/CodeWithDennis/filament-select-tree/3.x/resources/images/example-3.jpg)
+![example-1](https://raw.githubusercontent.com/abdelhamiderrahmouni/filament-select-tree-extended/main/resources/images/example-1.jpg)
+![example-2](https://raw.githubusercontent.com/abdelhamiderrahmouni/filament-select-tree-extended/main/resources/images/example-2.jpg)
+![example-3](https://raw.githubusercontent.com/abdelhamiderrahmouni/filament-select-tree-extended/main/resources/images/example-3.jpg)
 
 ## Contributing
 
@@ -219,7 +221,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [CodeWithDennis](https://github.com/CodeWithDennis)
+- [AbdelhamidErrahmouni](https://github.com/abdelhamiderrahmouni)
 - [Dipson88](https://github.com/dipson88/treeselectjs)
 - [All Contributors](../../contributors)
 

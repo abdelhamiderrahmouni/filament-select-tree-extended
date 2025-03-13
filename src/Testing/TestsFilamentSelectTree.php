@@ -1,6 +1,6 @@
 <?php
 
-namespace SebGM\FilamentSelectTree\Testing;
+namespace AbdelhamidErrahmouni\FilamentSelectTreeExtended\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace SebGM\FilamentSelectTree;
+namespace AbdelhamidErrahmouni\FilamentSelectTreeExtended;
 
 use Closure;
 use Exception;
@@ -30,7 +30,7 @@ class SelectTree extends Field implements HasAffixActions
     use HasPivotData;
     use HasPlaceholder;
 
-    protected string $view = 'select-tree::select-tree';
+    protected string $view = 'select-tree::select-tree-extended';
 
     protected bool $withCount = false;
 
